@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --mainColor: #4855CD;
+    --secondaryColor: #2a3490;
+}
+
+h1 {
+    font-family: "Sankofa Display", sans-serif;
+    color: var(--mainColor);
+    font-size: 60px;
+    font-weight: 900;
+    padding: 20px;
+}
+
+h1 i {
+    font-size: 40px;
+}
+
+#bottomDiv {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#homeDiv, #accountDiv {
+    width: 50%;
+    height: 12vh;
+    background-color: var(--mainColor);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+#homeDiv:hover, #accountDiv:hover {
+    cursor: pointer;
+    background-color: var(--secondaryColor);
+}
+
+#addButton {
+    position: fixed;
+    right: 20px;
+    bottom: 15vh;
+    font-size: 60px;
+    color: var(--mainColor);
+    transition: 0.5s;
+}
+
+#addButton:hover {
+    cursor: pointer;
+    color: var(--secondaryColor);
+}
+
+#centerDiv {
+    min-height: 77vh;
+    position: absolute;
+    top: 13vh;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#zeroNotes {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#zeroNotes img {
+    width: 90%;
+    max-width: 300px;
+}
+
+#zeroNotes h3 {
+    font-size: 22px;
+    color: var(--secondaryColor);
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    font-size: 25px;
+    padding: 10px;
+    outline-color: var(--mainColor);
+}
+
+#notesDiv {
+    margin-bottom: 18vh;
+}
+
+#notesDiv div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 25px;
+    background-color: #DDDFF5;
+    border-bottom: 2px solid #4855CD;
+    align-items: center;
+}
+
+#notesDiv div p {
+    margin: 0;
+    margin-right: 20px;
+}
+
+#notesDiv div i {
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+#notesDiv div i:hover {
+    cursor: pointer;
+    color: rgb(60, 255, 0);
+    font-size: 40px;
+}
+
+#optionsDiv {
+    height: 73vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#optionsDiv div {
+    width: 80%;
+    max-width: 450px;
+    text-align: center;
+    padding: 40px;
+    border: 3px solid var(--mainColor);
+    background-image: linear-gradient(white, rgba(0, 255, 255, 0.265));
+    border-radius: 20px;
+}
+
+#optionsDiv div input {
+    width: 80%;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(16, 244, 244);
+    outline-color: var(--mainColor);
+}
+
+#optionsDiv div button {
+    width: 80%;
+}
+
+#optionsDiv #signupDiv {
+    display: none;
+}
+
+#optionsDiv i {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+#optionsDiv i:hover {
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+#optionsDiv #errorText {
+    font-size: 22px;
+    color: rgb(60, 255, 0);
+    margin-bottom: 10px;
+    display: none;
+}
+
+#userDiv {
+    height: 73vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#userDiv div {
+    width: 80%;
+    max-width: 450px;
+    text-align: center;
+    padding: 40px;
+    border: 3px solid var(--mainColor);
+    background-image: linear-gradient(white, rgba(0, 255, 255, 0.265));
+    border-radius: 20px;
+}
+
+#adsDiv {
+    width: 250px;
+    position: absolute;
+    top: 15vh;
+    left: 20px;
+    display: none;
+}
+
+#adsDiv div {
+    height: 300px;
+    background-color: blue;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: 1200px) {
+    
+    #notesDiv {
+        width: 600px;
+        margin: auto;
+    }
+
+    #notesDiv div {
+        border: 2px solid var(--mainColor);
+        margin-bottom: 20px;
+        border-radius: 10px 20px;
+    }
+
+    #bottomDiv {
+        right: 0;
+        left: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        width: 100px;
+        height: 25vh;
+        align-items: flex-end;
+    }
+
+    #homeDiv, #accountDiv {
+        width: 100%;
+        height: 50%;
+    }
+
+
+    #adsDiv {
+        display: block;
+    }
+
+}
